@@ -1,0 +1,72 @@
+{
+  "doctype": "DocType",
+  "name": "Google Sheet",
+  "module": "Confirra Integration",
+  "custom": 1,
+  "istable": 0,
+  "editable_grid": 0,
+  "track_changes": 1,
+  "engine": "InnoDB",
+  "fields": [
+    {
+      "fieldname": "sheet_name",
+      "label": "Sheet Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "sheet_id",
+      "label": "Google Sheet ID",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "description": "Spreadsheet ID from Google (required for syncing)"
+    },
+    {
+      "fieldname": "sheet_url",
+      "label": "Google Sheet URL",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "linked_user",
+      "label": "Confirra User",
+      "fieldtype": "Link",
+      "options": "Confirra Users",
+      "reqd": 1
+    },
+    {
+      "fieldname": "linked_store",
+      "label": "Store (Optional)",
+      "fieldtype": "Link",
+      "options": "Confirra Stores"
+    },
+    {
+      "fieldname": "sync_direction",
+      "label": "Sync Direction",
+      "fieldtype": "Select",
+      "options": "ERPNext → Google Sheet\nGoogle Sheet → ERPNext\nBidirectional",
+      "default": "ERPNext → Google Sheet"
+    },
+    {
+      "fieldname": "auto_sync",
+      "label": "Enable Auto Sync",
+      "fieldtype": "Check",
+      "default": 0
+    },
+    {
+      "fieldname": "last_sync_time",
+      "label": "Last Sync Time",
+      "fieldtype": "Datetime",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

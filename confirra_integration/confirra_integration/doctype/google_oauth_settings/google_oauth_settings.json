@@ -1,0 +1,48 @@
+{
+  "doctype": "DocType",
+  "name": "Google OAuth Settings",
+  "module": "Confirra Integration",
+  "custom": 1,
+  "istable": 0,
+  "issingle": 1,
+  "editable_grid": 0,
+  "track_changes": 0,
+  "engine": "InnoDB",
+  "fields": [
+    {
+      "fieldname": "client_id",
+      "label": "Client ID",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "client_secret",
+      "label": "Client Secret",
+      "fieldtype": "Password",
+      "reqd": 1
+    },
+    {
+      "fieldname": "redirect_url",
+      "label": "Redirect URL",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "description": "Example: https://your-site.com/api/method/google_integration.google_oauth.callback"
+    },
+    {
+      "fieldname": "scope",
+      "label": "Scope",
+      "fieldtype": "Small Text",
+      "default": "https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/drive"
+    }
+  ],
+    "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}
+    
